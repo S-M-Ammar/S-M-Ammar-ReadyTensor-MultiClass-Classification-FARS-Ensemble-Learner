@@ -1,0 +1,11 @@
+Error occurred during training. Error: __init__() got an unexpected keyword argument 'n_neighbors'
+Traceback (most recent call last):
+  File "train.py", line 133, in run_training
+    predictor = train_predictor_model(
+  File "/Users/ammar/ReadyTensor-MultiClass-Classification-FARS/src/prediction/predictor_model.py", line 167, in train_predictor_model
+    classifier = Classifier(**hyperparameters)
+  File "/Users/ammar/ReadyTensor-MultiClass-Classification-FARS/src/prediction/predictor_model.py", line 57, in __init__
+    self.model = self.build_model()
+  File "/Users/ammar/ReadyTensor-MultiClass-Classification-FARS/src/prediction/predictor_model.py", line 70, in build_model
+    gnb = GaussianNB(
+TypeError: __init__() got an unexpected keyword argument 'n_neighbors'

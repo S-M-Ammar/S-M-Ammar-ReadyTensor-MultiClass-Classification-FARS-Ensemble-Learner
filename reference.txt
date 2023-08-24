@@ -1,0 +1,51 @@
+https://docs.readytensor.ai/for-users/evaluating-and-using-models/binary-classification
+https://python.plainenglish.io/data-validation-building-data-validating-classes-with-pydantic-8ee4a023f26d
+https://github.com/readytensor/rt_bin_class_decision_tree_sklearn_shapley/blob/main/src/train.py
+https://saturncloud.io/blog/how-to-put-customized-functions-in-sklearn-pipeline/
+
+https://github.com/readytensor/rt_mc_class_decision_tree_sklearn_shapley
+https://docs.readytensor.ai/for-users/evaluating-and-using-models/multiclass-classification
+
+docker run -p 8080:8080 readytensor:latest train -t  
+// {
+      //   "name": "Sex",
+      //   "description": "Passenger Gender",
+      //   "dataType": "CATEGORICAL",
+      //   "categories": ["male", "female"],
+      //   "nullable": true
+      // },
+      // {
+      //   "name": "Age",
+      //   "description": "Passenger Age",
+      //   "dataType": "NUMERIC",
+      //   "example": 32,
+      //   "nullable": true
+      // },
+      // {
+      //   "name": "SibSp",
+      //   "description": "# of siblings / spouses aboard the Titanic",
+      //   "dataType": "NUMERIC",
+      //   "example": 1,
+      //   "nullable": true
+      // },
+      // {
+      //   "name": "Parch",
+      //   "description": "# of parents / children aboard the Titanic",
+      //   "dataType": "NUMERIC",
+      //   "example": 0,
+      //   "nullable": true
+      // },
+      // {
+      //   "name": "Fare",
+      //   "description": "Travel Cost",
+      //   "dataType": "NUMERIC",
+      //   "example": 120,
+      //   "nullable": true
+      // },
+      // {
+      //   "name": "Embarked",
+      //   "description": "Port of Embarkation",
+      //   "dataType": "CATEGORICAL",
+      //   "categories": ["male", "female"],
+      //   "nullable": true
+      // }

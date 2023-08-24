@@ -1,0 +1,12 @@
+{
+    
+    "rf_01_n_estimators": 40,
+    "rf_01_max_depth": 1,
+    "rf_01_min_samples_split":2 , 
+    "rf_01_min_samples_leaf": 2 , 
+    "rf_01_max_features": "log2"
+
+   
+    
+}
+

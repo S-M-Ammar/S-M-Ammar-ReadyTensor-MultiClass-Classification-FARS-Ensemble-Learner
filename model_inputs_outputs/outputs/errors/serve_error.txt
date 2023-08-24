@@ -1,0 +1,35 @@
+Error occurred during inference. Request id: e28777539c Error: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Embarked_Q
+- Embarked_S
+- Fare
+- Parch_0
+- Parch_1
+- ...
+
+Traceback (most recent call last):
+  File "/Users/ammar/Ready Tensor/src/serve.py", line 76, in infer
+    _, predictions_response = await transform_req_data_and_make_predictions(data,request_id)
+  File "/Users/ammar/Ready Tensor/src/serve_utils.py", line 43, in transform_req_data_and_make_predictions
+    predictions_arr = predict_with_model(
+  File "/Users/ammar/Ready Tensor/src/prediction/predictor_model.py", line 163, in predict_with_model
+    return classifier.predict_proba(data)
+  File "/Users/ammar/Ready Tensor/src/prediction/predictor_model.py", line 83, in predict_proba
+    return self.model.predict_proba(inputs)
+  File "/Users/ammar/Library/Python/3.8/lib/python/site-packages/sklearn/ensemble/_forest.py", line 865, in predict_proba
+    X = self._validate_X_predict(X)
+  File "/Users/ammar/Library/Python/3.8/lib/python/site-packages/sklearn/ensemble/_forest.py", line 599, in _validate_X_predict
+    X = self._validate_data(X, dtype=DTYPE, accept_sparse="csr", reset=False)
+  File "/Users/ammar/Library/Python/3.8/lib/python/site-packages/sklearn/base.py", line 579, in _validate_data
+    self._check_feature_names(X, reset=reset)
+  File "/Users/ammar/Library/Python/3.8/lib/python/site-packages/sklearn/base.py", line 506, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Embarked_Q
+- Embarked_S
+- Fare
+- Parch_0
+- Parch_1
+- ...
+
