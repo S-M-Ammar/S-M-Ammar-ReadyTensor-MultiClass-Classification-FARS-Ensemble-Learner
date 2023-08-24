@@ -69,7 +69,10 @@ def run_training(
         )
 
         # custom logic for dropping irrelevant columns
-        train_data.drop(labels=['month','day','day_week','hour','minute','a_region','state'],axis=1,inplace=True)
+        try:
+            train_data.drop(labels=['month','day','day_week','hour','minute','a_region','state'],axis=1,inplace=True)
+        except Exception as e:
+            pass
 
         train_pipeline = Pipeline([
                                      ('CategoricalTransformer', CategoricalTransformer(data_schema.categorical_features,is_training=True)),
