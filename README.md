@@ -1,6 +1,6 @@
 # Ensemble Learner in Scikit-Learn with Shapley Explanations
 ## Project Description
-This repository is a dockerized implementation of the re-usable binary classifier model. It is implemented in flexible way so that it can be used with any binary classification dataset with the use of CSV-formatted data, and a JSON-formatted data schema file. The main purpose of this repository is to provide a complete example of a machine learning model implementation that is ready for deployment.
+This repository is a dockerized implementation of the re-usable multi-class classifier model. It is implemented in flexible way so that it can be used with any multi-class classification dataset with the use of CSV-formatted data, and a JSON-formatted data schema file. The main purpose of this repository is to provide a complete example of a machine learning model implementation that is ready for deployment.
 The following are the requirements for using your data with this model:
 - The data must be in CSV format.
 - The number of rows must not exceed 20,000. Number of columns must not exceed 200. The model may function with larger datasets, but it has not been performance tested on larger datasets.
@@ -58,7 +58,7 @@ In this section we cover the following:
 - How to run the model implementation with Docker
 - How to use the inference service (with or without Docker)
 ### Preparing your data
-- If you plan to run this model implementation on your own binary classification dataset, you will need your training and testing data in a CSV format. Also, you will need to create a schema file as per the Ready Tensor specifications. The schema is in JSON format, and it's easy to create. You can use the example schema file provided in the `examples` directory as a template.
+- If you plan to run this model implementation on your own multi-class classification dataset, you will need your training and testing data in a CSV format. Also, you will need to create a schema file as per the Ready Tensor specifications. The schema is in JSON format, and it's easy to create. You can use the example schema file provided in the `examples` directory as a template.
 ### To run locally (without Docker)
 - Create your virtual environment and install dependencies listed in `requirements.txt` which is inside the `requirements` directory.
 - Move the three example files (`titanic_schema.json`, `titanic_train.csv` and `titanic_test.csv`) in the `examples` directory into the `./model_inputs_outputs/inputs/schema`, `./model_inputs_outputs/inputs/data/training` and `./model_inputs_outputs/inputs/data/testing` folders, respectively (or alternatively, place your custom dataset files in the same locations).
@@ -123,7 +123,7 @@ The key `instances` contains a list of objects, each of which is a sample for wh
   "timestamp": "<timestamp>",
   "requestId": "<uniquely generated id>",
   "targetClasses": ["0", "1"],
-  "targetDescription": "A binary variable indicating whether or not the passenger survived (0 = No, 1 = Yes).",
+  "targetDescription": "A variable indicating whether or not the passenger survived (0 = No, 1 = Yes).",
   "predictions": [
     {
       "sampleId": "879",
@@ -163,7 +163,7 @@ The server will respond with a JSON object containing the predicted probabilitie
   "timestamp": "2023-05-22T10:51:45.860800",
   "requestId": "0ed3d0b76d",
   "targetClasses": ["0", "1"],
-  "targetDescription": "A binary variable indicating whether or not the passenger survived (0 = No, 1 = Yes).",
+  "targetDescription": "A variable indicating whether or not the passenger survived (0 = No, 1 = Yes).",
   "predictions": [
     {
       "sampleId": "879",
